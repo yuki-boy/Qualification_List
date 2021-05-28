@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Request;
 
 class LoginController extends Controller
 {
@@ -38,4 +39,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    // logoutしたらloginページに遷移するよう実装
+    // protected function loggedOut(Request $request)
+    // {
+    //     return redirect()->route('login');
+    // }
+
 }

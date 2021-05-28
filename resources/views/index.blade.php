@@ -1,3 +1,13 @@
+@extends('layouts.layout')
+@section('content')
+
 {{ Auth::user()->name }}の資格リスト
 
-追加
+
+<div id="open">追加</div>
+
+
+
+
+
+@endsection
