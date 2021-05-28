@@ -16,5 +16,5 @@
 <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div>
 </section>
 
-
+<div id="covor" class="hidden"></div>
 @endsection

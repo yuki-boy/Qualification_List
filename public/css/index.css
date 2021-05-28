@@ -14,10 +14,21 @@
   z-index: 2;
 }
 
-/* #modal.hidden{
-  display: none;
-} */
-
 #modal.hidden{
   transform: translate(0, -500px);
+}
+
+#covor{
+  background: grey;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+#covor.hidden{
+  display: none;
 }
