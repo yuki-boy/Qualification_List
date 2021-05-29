@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\QualificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/index', [App\Http\Controllers\QualificationController::class, 'index'])->name('index');
+Route::get('/index', [QualificationController::class, 'index'])->name('index');
+
+Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');

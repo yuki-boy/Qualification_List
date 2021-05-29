@@ -17,7 +17,7 @@
     covor.classList.add('hidden');
   });
 
-  mask.addEventListener('click', () => {
+  covor.addEventListener('click', () => {
     close.click();
   })
 
