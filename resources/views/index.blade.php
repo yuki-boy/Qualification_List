@@ -16,6 +16,7 @@
 @csrf
   <input type="text" name="qualifications">
 
+  
   <input type="submit" name="create" value="追加">
 </form>
 <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div>

@@ -19,6 +19,9 @@ class QualificationController extends Controller
         // バリデーション追加
         $validatedDate = $request->validate([
             'name' => 'required',
+        ],
+        [
+            'name.required' => '資格名を入力して下さい'
         ]);
 
         $quali = new Qualification();
