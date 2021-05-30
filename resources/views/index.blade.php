@@ -1,7 +1,10 @@
 @extends('layouts.layout')
 @section('content')
 
-{{ Auth::user()->name }}の資格リスト
+<main>
+  <div class="contents_wrapper">
+
+<h2>{{ Auth::user()->name }}の資格リスト</h2>
 
 <div id="open">
 <button type="button" class="btn btn-primary">追加</button>
@@ -9,9 +12,15 @@
 
 
 @foreach ($qualis as $quali)
- <p>{{ $quali->name }}</p>
+ <p>
+  {{ $quali->name }}
  <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a>
+ </p>
 @endforeach
+
+  </div>
+</main>
+
 
 
 <section id="modal" class="hidden">

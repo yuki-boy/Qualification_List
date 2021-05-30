@@ -1,6 +1,10 @@
 
 
-#modal {
+.contents_wrapper{
+  text-align: center;
+}
+
+#modal{
   background: #fff;
   width: 400px;
   padding: 20px;
