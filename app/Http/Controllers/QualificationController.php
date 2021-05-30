@@ -36,4 +36,11 @@ class QualificationController extends Controller
         return redirect()->back();
     }
 
+    public function delete($id)
+    {
+        Qualification::find($id)->delete();
+
+        return redirect()->back();
+    }
+
 }

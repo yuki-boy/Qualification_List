@@ -26,3 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/index', [QualificationController::class, 'index'])->name('index');
 
 Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');
+
+Route::get('/delete_qualification/{id}', [QualificationController::class, 'delete'])->name('delete.qualification');
+
+
