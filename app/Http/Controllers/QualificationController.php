@@ -7,13 +7,13 @@ use App\Models\User;
 use App\Models\Qualification;
 use Illuminate\Support\Facades\Auth;
 
-
-
 class QualificationController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $qualis = Qualification::all();
+
+        return view('index', compact('qualis'));
     }
 
     public function save(Request $request)
