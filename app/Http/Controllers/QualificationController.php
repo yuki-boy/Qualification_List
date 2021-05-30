@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Qualification;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class QualificationController extends Controller
@@ -26,10 +28,12 @@ class QualificationController extends Controller
 
         $quali = new Qualification();
         $quali->name = $request->name;
-        $quali->user_id = Auth::id();
+        // $quali->get_date = $request->get_date;
+        // $quali->lost_date = $request->lost_date;
+        $quali->user_id = Auth::user()->id;
         $quali->save();
         
-        return redirect('index');
+        return redirect()->back();
     }
 
 }

@@ -16,8 +16,11 @@ class CreateQualificationsTable extends Migration
         Schema::create('qualifications', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->timestamp('get_date');
-            $table->timestamp('lost_date');
+            $table->timestamp('get_date')->nullable();
+            $table->timestamp('lost_date')->nullable();
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+            $table->timestamp('deleted_at')->nullable();
 
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
