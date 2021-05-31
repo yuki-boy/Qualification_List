@@ -1,23 +1,21 @@
 @extends('layouts.layout')
 @section('content')
 
+<div class="title_wrapper">
+  <h1>{{ Auth::user()->name }}の資格リスト</h1>
+  <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
+</div>
+
 <main>
   <div class="contents_wrapper">
 
-<h2>{{ Auth::user()->name }}の資格リスト</h2>
-
-<div id="open">
-<button type="button" class="btn btn-primary">追加</button>
-</div>
-
-
-@foreach ($qualis as $quali)
- <p>
-  {{ $quali->name }}
-  {{ $quali->get_date }}
- <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a>
- </p>
-@endforeach
+  @foreach ($qualis as $quali)
+  <p>
+    {{ $quali->name }}
+    {{ $quali->get_date }}
+  <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a>
+  </p>
+  @endforeach
 
   </div>
 </main>
