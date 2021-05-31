@@ -12,7 +12,7 @@ class QualificationController extends Controller
     public function index()
     {
         $qualis = Qualification::all();
-
+        // dd($qualis);
         return view('index', compact('qualis'));
     }
 
@@ -28,7 +28,7 @@ class QualificationController extends Controller
 
         $quali = new Qualification();
         $quali->name = $request->name;
-        // $quali->get_date = $request->get_date;
+        $quali->get_date = $request->get_date;
         // $quali->lost_date = $request->lost_date;
         $quali->user_id = Auth::user()->id;
         $quali->save();
