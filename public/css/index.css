@@ -1,6 +1,16 @@
+.title_wrapper{
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: center;
+}
+
+.contents_wrapper{
+  text-align: center;
+}
 
 
-#modal {
+
+#modal{
   background: #fff;
   width: 400px;
   padding: 20px;

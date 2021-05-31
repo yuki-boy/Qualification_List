@@ -21,8 +21,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth']], function()
+{
 
-Route::get('/index', [QualificationController::class, 'index'])->name('index');
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');
+    Route::get('/index', [QualificationController::class, 'index'])->name('index');
+
+    Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');
+
+    Route::get('/delete_qualification/{id}', [QualificationController::class, 'delete'])->name('delete.qualification');
+
+
+});
