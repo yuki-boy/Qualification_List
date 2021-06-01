@@ -43,4 +43,22 @@ class QualificationController extends Controller
         return redirect()->back();
     }
 
+    public function editPage($id)
+    {
+        $quali = Qualification::find($id);
+
+        return view('edit', compact('quali'));
+    }
+
+    public function edit(Request $request)
+    {
+        Qualification::find($request->id)->update([
+            'name' => $request->name,
+            'get_date' => $request->get_date,
+        ]);
+
+        return redirect('index');
+    }
+
+
 }
