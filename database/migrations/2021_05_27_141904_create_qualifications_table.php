@@ -16,8 +16,8 @@ class CreateQualificationsTable extends Migration
         Schema::create('qualifications', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('get_date')->nullable();
-            $table->integer('lost_date')->nullable();
+            $table->string('get_date')->nullable();
+            $table->date('lost_date')->nullable();
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
             $table->timestamp('deleted_at')->nullable();

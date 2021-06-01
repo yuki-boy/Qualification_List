@@ -5,6 +5,20 @@
 }
 
 .contents_wrapper{
+  /* background-color: grey; */
+}
+
+table{
+  margin: 0 auto;
+  width: 80%;
+}
+
+thead{
+  font-size: x-large;
+  border-bottom: solid 1px;
+}
+
+td{
   text-align: center;
 }
 

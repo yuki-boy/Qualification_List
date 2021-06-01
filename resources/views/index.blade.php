@@ -8,15 +8,36 @@
 
 <main>
   <div class="contents_wrapper">
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 50%;">資格名</td>
+        <td style="width: 25%;">取得した年月</td>
+        <td style="width: 25%;">操作</td>
+      </tr>
+    </thead>
 
-  @foreach ($qualis as $quali)
-  <p>
-    {{ $quali->name }}
-    {{ $quali->get_date }}
-  <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a>
-  </p>
-  @endforeach
 
+    <tbody>
+      @foreach ($qualis as $quali)
+        <tr>
+          <td>{{ $quali->name }}</td>
+
+
+          
+          @if(is_null($quali->get_date))
+          <td>未記入</td>
+          @else
+          <td>{{ $quali->get_date }}</td>
+          @endif
+
+
+
+          <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a></td>
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
   </div>
 </main>
 
@@ -28,7 +49,7 @@
   <input type="text" name="name" placeholder="資格名を入力して下さい"><br>
 
   <!-- 資格取得の年月を入力 -->
-  <input type="int" name="get_date" placeholder="取得した年月">
+  <input type="month" name="get_date" placeholder="取得した年月">
 
   <input type="submit" name="create" value="追加">
 </form>
