@@ -11,17 +11,28 @@
   <table>
     <thead>
       <tr>
-        <td>資格名</td>
-        <td>取得した年月</td>
-        <td>操作</td>
+        <td style="width: 50%;">資格名</td>
+        <td style="width: 25%;">取得した年月</td>
+        <td style="width: 25%;">操作</td>
       </tr>
     </thead>
+
 
     <tbody>
       @foreach ($qualis as $quali)
         <tr>
           <td>{{ $quali->name }}</td>
+
+
+          
+          @if(is_null($quali->get_date))
+          <td>未記入</td>
+          @else
           <td>{{ $quali->get_date }}</td>
+          @endif
+
+
+
           <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a></td>
         </tr>
       @endforeach
