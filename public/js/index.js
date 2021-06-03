@@ -22,3 +22,13 @@
   })
 
 }
+
+
+
+$(document).ready(function() {
+ $("#timeout").fadeIn().queue(function() {
+     setTimeout(function(){$("#timeout").dequeue();
+     }, 1000);
+ });
+ $("#timeout").fadeOut();
+});

@@ -32,5 +32,9 @@ Route::group(['middleware' => ['auth']], function()
 
     Route::get('/delete_qualification/{id}', [QualificationController::class, 'delete'])->name('delete.qualification');
 
+    Route::get('/edit_page/{id}', [QualificationController::class, 'editPage'])->name('edit.page');
+
+    Route::post('/edit_qualification', [QualificationController::class, 'edit'])->name('edit.qualification');
+
 
 });
