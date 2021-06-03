@@ -18,7 +18,6 @@ class QualificationController extends Controller
 
     public function save(Request $request)
     {
-        // バリデーション追加
         $validatedDate = $request->validate([
             'name' => 'required',
         ],
@@ -33,14 +32,14 @@ class QualificationController extends Controller
         $quali->user_id = Auth::user()->id;
         $quali->save();
         
-        return redirect()->back();
+        return redirect()->back()->with('success', '追加しました');
     }
 
     public function delete($id)
     {
         Qualification::find($id)->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', '削除しました');
     }
 
     public function editPage($id)

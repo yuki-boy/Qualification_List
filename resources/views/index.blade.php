@@ -1,6 +1,15 @@
 @extends('layouts.layout')
 @section('content')
 
+@if(session('success'))
+  <div class="alert alert-success alert-dismissible fade show" role="alert" id="timeout">
+  {{ session('success') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+@endif
+
 <div class="title_wrapper">
   <h1>{{ Auth::user()->name }}の資格リスト</h1>
   <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
@@ -28,7 +37,7 @@
           <td>{{ $quali->get_date }}</td>
           @endif
           <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}">編集</a></td>
-          <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}">削除</a></td>
+          <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" >削除</a></td>
         </tr>
       @endforeach
     </tbody>
