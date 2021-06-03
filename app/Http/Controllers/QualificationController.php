@@ -56,7 +56,7 @@ class QualificationController extends Controller
             'get_date' => $request->get_date,
         ]);
 
-        return redirect('index');
+        return redirect('index')->with('success', '編集しました');
     }
 
 
