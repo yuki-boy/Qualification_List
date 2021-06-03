@@ -46,6 +46,14 @@ tbody{
   font-size: x-large;
 }
 
+.edit-quali{
+  text-align: center;
+}
+
+.edit_fill{
+  width: 300px;
+}
+
 
 
 #modal{
