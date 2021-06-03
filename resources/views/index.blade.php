@@ -29,7 +29,8 @@
 
     <tbody>
       @foreach ($qualis as $quali)
-        <tr>
+      <tr>
+        <div class="each-tr">
           <td>{{ $quali->name }}</td>
           @if(is_null($quali->get_date))
           <td>未記入</td>
@@ -38,7 +39,8 @@
           @endif
           <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a></td>
           <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">削除</button></a></td>
-        </tr>
+        </div>
+      </tr>
       @endforeach
     </tbody>
   </table>

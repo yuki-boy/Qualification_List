@@ -6,6 +6,7 @@ body{
   /* background-color: tomato; */
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .contents_wrapper{
@@ -25,12 +26,24 @@ table{
 }
 
 thead{
-  font-size: x-large;
+  font-size: xx-large;
   border-bottom: solid 1px;
 }
 
 td{
+  /* background:lightblue; */
   text-align: center;
+  padding:10px 0px;
+}
+
+tr{
+  /* display: inline-block; */
+  /* background-color: aquamarine; */
+  /* padding-bottom: 20px; */
+}
+
+tbody{
+  font-size: x-large;
 }
 
 
