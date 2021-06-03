@@ -1,3 +1,6 @@
+@extends('layouts.layout')
+@section('content')
+
 <form method="post" action="{{ route('edit.qualification', ['id' => $quali->id]) }}">
 @csrf
   <input type="text" name="name" value="{{ old('name', $quali->name) }}"><br>
@@ -6,3 +9,5 @@
 
   <input type="submit" name="create" value="編集">
 </form>
+
+@endsection

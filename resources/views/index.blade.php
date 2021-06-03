@@ -36,8 +36,8 @@
           @else
           <td>{{ $quali->get_date }}</td>
           @endif
-          <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}">編集</a></td>
-          <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" >削除</a></td>
+          <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a></td>
+          <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">削除</button></a></td>
         </tr>
       @endforeach
     </tbody>

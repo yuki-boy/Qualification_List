@@ -50,7 +50,10 @@ td{
 }
 
 #modal.hidden{
-  transform: translate(0, -500px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -400px);
 }
 
 #covor{
