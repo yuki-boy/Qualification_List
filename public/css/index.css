@@ -6,6 +6,7 @@ body{
   /* background-color: tomato; */
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .contents_wrapper{
@@ -25,12 +26,24 @@ table{
 }
 
 thead{
-  font-size: x-large;
+  font-size: xx-large;
   border-bottom: solid 1px;
 }
 
 td{
+  /* background:lightblue; */
   text-align: center;
+  padding:10px 0px;
+}
+
+tr{
+  /* display: inline-block; */
+  /* background-color: aquamarine; */
+  /* padding-bottom: 20px; */
+}
+
+tbody{
+  font-size: x-large;
 }
 
 
@@ -38,6 +51,7 @@ td{
 #modal{
   background: #fff;
   width: 400px;
+  height: 200px;
   padding: 20px;
   border-radius: 6px;
   position: absolute;
@@ -69,4 +83,12 @@ td{
 
 #covor.hidden{
   display: none;
+}
+
+.fills{
+  text-align: center;
+}
+
+.quali_fill{
+  width: 80%;
 }

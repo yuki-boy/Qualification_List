@@ -21,24 +21,35 @@
     <thead>
       <tr>
         <td style="width: 30%;">資格名</td>
-        <td style="width: 30%;">取得した年月</td>
-        <td style="width: 20%;" colspan="2">操作</td>
+        <td style="width: 20%;">取得月</td>
+        <td style="width: 20%;">失効月</td>
+        <td style="width: 10%;" colspan="2">操作</td>
       </tr>
     </thead>
 
 
     <tbody>
       @foreach ($qualis as $quali)
-        <tr>
+      <tr>
+        <div class="each-tr">
           <td>{{ $quali->name }}</td>
+
           @if(is_null($quali->get_date))
           <td>未記入</td>
           @else
           <td>{{ $quali->get_date }}</td>
           @endif
+
+          @if(is_null($quali->lost_date))
+          <td style="opacity: 0.4;">未記入</td>
+          @else
+          <td style="opacity: 0.4;">{{ $quali->lost_date }}</td>
+          @endif
+
           <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a></td>
           <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">削除</button></a></td>
-        </tr>
+        </div>
+      </tr>
       @endforeach
     </tbody>
   </table>
@@ -50,11 +61,14 @@
 <section id="modal" class="hidden">
 <form method="post" action="{{ route('save.qualification') }}">
 @csrf
-  <input type="text" name="name" placeholder="資格名を入力して下さい"><br>
+  <div class="fills">
+    <input class="quali_fill" type="text" name="name" placeholder="資格名を入力して下さい"><br>
 
-  <input type="month" name="get_date" placeholder="取得した年月">
+    取得月<input type="month" name="get_date"><br>
+    失効月<input type="month" name="lost_date"><br>
 
-  <input type="submit" name="create" value="追加">
+    <input type="submit" name="create" value="追加">
+  </div>
 </form>
 <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div>
 </section>

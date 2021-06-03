@@ -28,7 +28,7 @@ class QualificationController extends Controller
         $quali = new Qualification();
         $quali->name = $request->name;
         $quali->get_date = $request->get_date;
-        // $quali->lost_date = $request->lost_date;
+        $quali->lost_date = $request->lost_date;
         $quali->user_id = Auth::user()->id;
         $quali->save();
         
@@ -54,6 +54,7 @@ class QualificationController extends Controller
         Qualification::find($request->id)->update([
             'name' => $request->name,
             'get_date' => $request->get_date,
+            'lost_date' => $request->lost_date,
         ]);
 
         return redirect('index')->with('success', '編集しました');
