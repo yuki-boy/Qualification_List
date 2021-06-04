@@ -38,8 +38,13 @@ td{
 
 tr{
   /* display: inline-block; */
-  /* background-color: aquamarine; */
+  /* background-color: white; */
   /* padding-bottom: 20px; */
+}
+
+tr:nth-child(even){
+  background-color: gainsboro;
+
 }
 
 tbody{
