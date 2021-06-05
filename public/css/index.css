@@ -113,5 +113,15 @@ tbody{
 }
 
 .quali_fill{
-  width: 80%;
+  padding-bottom: 10px;
 }
+
+.date_fill{
+  padding-bottom: 10px;
+}
+
+.modal_buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
