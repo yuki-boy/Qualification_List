@@ -20,9 +20,7 @@
   covor.addEventListener('click', () => {
     close.click();
   })
-
 }
-
 
 
 $(document).ready(function() {
@@ -31,4 +29,12 @@ $(document).ready(function() {
      }, 1000);
  });
  $("#timeout").fadeOut();
+});
+
+
+
+$(function(){
+  Sortable.create(each_tr, {
+    animation: 150,
+  });
 });
