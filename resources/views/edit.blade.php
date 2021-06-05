@@ -18,14 +18,6 @@
     </a>
     <button type="submit" class="btn btn-primary">編集</button>
   </div>
-
-    <!-- <div class="modal_buttons">
-      <button type="button" id="close" class="btn btn-primary">閉じる</button>
-      <button type="submit" class="btn btn-primary">追加</button>
-    </div> -->
-
-
-
   </form>
 </div>
 
