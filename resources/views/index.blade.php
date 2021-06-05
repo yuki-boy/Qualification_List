@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 @section('content')
 
+
+<!-- 追加・削除・編集時のアラート表示 -->
 @if(session('success'))
   <div class="alert alert-success alert-dismissible fade show" role="alert" id="timeout">
   {{ session('success') }}
@@ -9,21 +11,25 @@
     </button>
   </div>
 @endif
+<!-- 追加・削除・編集時のアラート表示 -->
 
 <!-- モーダルウィンドウ -->
 <section id="modal" class="hidden">
 <form method="post" action="{{ route('save.qualification') }}">
-@csrf
+  @csrf
   <div class="fills">
-    <input class="quali_fill" type="text" name="name" placeholder="資格名を入力して下さい"><br>
+    <div class="quali_fill"><input type="text" name="name" placeholder="資格名を入力して下さい" style="width: 80%;"></div>
 
-    取得月 <input type="month" name="get_date"><br>
-    失効月 <input type="month" name="lost_date"><br>
+    <div class="date_fill">取得月 <input type="month" name="get_date"></div>
+    <div class="date_fill">失効月 <input type="month" name="lost_date"></div>    
 
-    <button type="submit" class="btn btn-primary">追加</button>
+    <div class="modal_buttons">
+      <button type="button" id="close" class="btn btn-primary">閉じる</button>
+      <button type="submit" class="btn btn-primary">追加</button>
+    </div>
   </div>
 </form>
-<div id="close"><button type="button" class="btn btn-primary">閉じる</button></div>
+<!-- <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div> -->
 </section>
 <!-- モーダルウィンドウ -->
 
@@ -42,7 +48,6 @@
         <td style="width: 10%;" colspan="2">操作</td>
       </tr>
     </thead>
-
 
     <tbody>
       <div id="each_tr">
@@ -63,17 +68,13 @@
         @endif
 
         <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a></td>
-        <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">削除</button></a></td>
+        <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a></td>
       </tr>
       @endforeach
       </div>
     </tbody>
   </table>
 </div>
-
-
-
-
 
 
 <div id="covor" class="hidden"></div>
