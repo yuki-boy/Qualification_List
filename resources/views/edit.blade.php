@@ -10,8 +10,10 @@
 
     失効月<input type="month" name="lost_date" value="{{ old('lost_date', $quali->lost_date) }}"><br>
 
-    <input type="submit" name="create" value="編集">
+    <button type="submit" class="btn btn-primary">編集</button>
   </form>
 </div>
+
+
 
 @endsection
