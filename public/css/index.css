@@ -125,3 +125,10 @@ tbody{
   justify-content: space-between;
 }
 
+.edit_buttons{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
