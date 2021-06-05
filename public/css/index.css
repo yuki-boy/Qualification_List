@@ -10,7 +10,7 @@ body{
 }
 
 .contents_wrapper{
-  /* background-color: grey; */
+  /* background-color: rebeccapurple; */
 }
 
 .alert{
@@ -36,9 +36,14 @@ td{
   padding:10px 0px;
 }
 
+.each-tr{
+  background-color: red;
+
+}
+
 tr{
   /* display: inline-block; */
-  /* background-color: white; */
+  /* background-color: red; */
   /* padding-bottom: 20px; */
 }
 
@@ -59,6 +64,10 @@ tbody{
   width: 300px;
 }
 
+.delete_button{
+  margin-left: 5px;
+}
+
 
 
 #modal{
@@ -68,7 +77,7 @@ tbody{
   padding: 20px;
   border-radius: 6px;
   position: absolute;
-  top: 40;
+  top: 180px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -78,6 +87,7 @@ tbody{
 
 #modal.hidden{
   position: absolute;
+  /* position: relative; */
   top: 0;
   left: 0;
   transform: translate(0, -400px);
