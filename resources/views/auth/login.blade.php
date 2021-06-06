@@ -64,8 +64,10 @@
                         </div>
                     </form><br>
 
-                        初めての方は
-                        <a href="{{ route('register') }}"><button type="submit" class="btn btn-primary">新規登録</button></a>
+                    <div style="text-align: center;">
+                    初めての方は
+                    <a href="{{ route('register') }}">新規登録</a>
+                    </div>
                     
                 </div>
             </div>
