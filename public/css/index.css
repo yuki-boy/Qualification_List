@@ -9,9 +9,6 @@ body{
   margin-bottom: 30px;
 }
 
-.contents_wrapper{
-  /* background-color: rebeccapurple; */
-}
 
 .alert{
   z-index: 1;
@@ -41,11 +38,7 @@ td{
 
 }
 
-tr{
-  /* display: inline-block; */
-  /* background-color: red; */
-  /* padding-bottom: 20px; */
-}
+
 
 tr:nth-child(even){
   background-color: gainsboro;

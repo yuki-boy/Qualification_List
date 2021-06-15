@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 @section('content')
 
-
 <!-- 追加・削除・編集時のアラート表示 -->
 @if(session('success'))
   <div class="alert alert-success alert-dismissible fade show" role="alert" id="timeout">
@@ -39,41 +38,48 @@
 </div>
 
 <div class="contents_wrapper">
-  <table>
-    <thead>
-      <tr>
-        <td style="width: 30%;">資格名</td>
-        <td style="width: 20%;">取得月</td>
-        <td style="width: 20%;">失効月</td>
-        <td style="width: 10%;" colspan="2">操作</td>
-      </tr>
-    </thead>
 
-    <tbody>
-      <div id="each_tr">
-      @foreach ($qualis as $quali)
-      <tr>
-        <td>{{ $quali->name }}</td>
+<div class="contents_wrapper">
+  <td style="width: 30%;">資格名</td>
+  <td style="width: 20%;">取得月</td>
+  <td style="width: 20%;">失効月</td>
+  <td style="width: 10%;" colspan="2">操作</td>
+</div>
 
-        @if(is_null($quali->get_date))
-        <td>未記入</td>
-        @else
-        <td>{{ $quali->get_date }}</td>
-        @endif
 
-        @if(is_null($quali->lost_date))
-        <td style="opacity: 0.4;">未記入</td>
-        @else
-        <td style="opacity: 0.4;">{{ $quali->lost_date }}</td>
-        @endif
+  <form method="post" action="">
+    @csrf
+    <ul class="sortable">
+      <?php foreach($qualis as $quali) { ?>
+      <li id="<?php echo $quali['id']; ?>">
+      <?php echo $quali->name?>
 
-        <td><a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a></td>
-        <td><a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a></td>
-      </tr>
-      @endforeach
-      </div>
-    </tbody>
-  </table>
+      <?php
+        if(is_null($quali->get_date)):
+          echo "未記入";
+        else:
+          echo $quali->get_date;
+        endif;
+      ?>
+
+      <?php 
+        if(is_null($quali->lost_date)):
+          echo "未記入";
+        else:
+          echo $quali->lost_date;
+        endif;
+      ?>
+
+      <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a>
+      <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a>
+
+      </li>
+      <?php } ?>
+    </ul>
+    <input type="hidden" id="sort_num" name="sort_num" />
+    <button id="submit">更新</button>
+  </form>
+
 </div>
 
 
