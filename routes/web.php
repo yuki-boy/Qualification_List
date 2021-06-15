@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\QualificationController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/newlogin', [UserController::class, 'newlogin'])->name('newlogin');
+
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function()
 {
+    
 
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
