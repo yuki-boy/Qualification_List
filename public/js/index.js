@@ -22,19 +22,24 @@
   })
 }
 
+'use strict'
 
-$(document).ready(function() {
- $("#timeout").fadeIn().queue(function() {
-     setTimeout(function(){$("#timeout").dequeue();
-     }, 1000);
- });
- $("#timeout").fadeOut();
-});
-
-
-
-$(function(){
-  Sortable.create(each_tr, {
-    animation: 150,
+  $(document).ready(function() {
+  $("#timeout").fadeIn().queue(function() {
+      setTimeout(function(){$("#timeout").dequeue();
+      }, 1000);
   });
-});
+  $("#timeout").fadeOut();
+  });
+
+
+
+  $(function() {
+    $(".sortable").sortable();
+    $(".sortable").disableSelection();
+    $("#submit").click(function() {
+        var listIds = $(".sortable").sortable("toArray");
+        $("#sort_num").val(listIds);
+        $("form").submit();
+    });
+  });
