@@ -42,7 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function qualifications(){
+    public function qualifications()
+    {
         return $this->hasMany(Qualification::class);
     }
 
