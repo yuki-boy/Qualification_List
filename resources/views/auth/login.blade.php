@@ -21,7 +21,7 @@
   </form>
   <div class="form-footer">
     <p><a href="{{ route('register') }}">初めての方はこちら</a></p>
-    <p><a href="#">パスワードをお忘れですか？</a></p>
+    <p><a href="{{ route('password.request') }}">パスワードをお忘れですか？</a></p>
   </div>
 </div>
 
