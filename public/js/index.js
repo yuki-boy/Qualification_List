@@ -39,7 +39,7 @@
     $(".sortable").disableSelection();
     $("#submit").click(function() {
         var listIds = $(".sortable").sortable("toArray");
-        $("#sort_num").val(listIds);
+        $("#list_ids").val(listIds);
         $("form").submit();
     });
   });

@@ -76,7 +76,7 @@
       </li>
       <?php } ?>
     </ul>
-    <input type="hidden" id="sort_num" name="sort_num" />
+    <input type="hidden" id="list_ids" name="list_ids" />
     <button id="submit">更新</button>
   </form>
 
