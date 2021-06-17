@@ -47,7 +47,7 @@
 </div>
 
 
-  <form method="post" action="">
+  <form method="post" action="{{ route('update.qualification') }}">
     @csrf
     <ul class="sortable">
       <?php foreach($qualis as $quali) { ?>

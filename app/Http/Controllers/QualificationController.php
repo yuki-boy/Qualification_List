@@ -63,5 +63,10 @@ class QualificationController extends Controller
         return redirect('index')->with('success', '編集しました');
     }
 
+    public function update(Request $request)
+    {
+        
+    }
+
 
 }
