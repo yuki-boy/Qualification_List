@@ -11,9 +11,9 @@ class QualificationController extends Controller
 {
     public function index()
     {
-        $qualis = Qualification::select('id', 'name', 'get_date', 'lost_date')
+        $qualis = Qualification::select('id', 'name', 'get_date', 'lost_date', 'sort_num')
             ->where('user_id','=',Auth::id())
-            ->orderBy('qualifications.id', 'desc')
+            ->orderBy('qualifications.sort_num')
             ->get();
         // dd($qualis);
         return view('index', compact('qualis'));
@@ -61,6 +61,23 @@ class QualificationController extends Controller
         ]);
 
         return redirect('index')->with('success', '編集しました');
+    }
+
+    public function update(Request $request)
+    {
+        $lists = explode(",", $request->list_ids);
+        $sorted_list = [];
+        foreach($lists as $index => $id) {
+            array_push($sorted_list, ['id' => $id, 'sort_num' => $index]);
+        }
+        
+        foreach($sorted_list as $list) {
+            Qualification::find($list['id'])->update([
+                'sort_num' => $list['sort_num']
+            ]);
+        }
+        
+        return redirect('index');
     }
 
 

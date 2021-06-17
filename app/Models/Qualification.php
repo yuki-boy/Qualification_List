@@ -10,7 +10,7 @@ class Qualification extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'get_date', 'lost_date', 'user_id'];
+    protected $fillable = ['name', 'get_date', 'lost_date', 'user_id', 'sort_num'];
 
     public function users(){
         return $this->belongsTo(User::class);

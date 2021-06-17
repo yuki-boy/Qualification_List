@@ -47,7 +47,7 @@
 </div>
 
 
-  <form method="post" action="">
+  <form method="post" action="{{ route('update.qualification') }}">
     @csrf
     <ul class="sortable">
       <?php foreach($qualis as $quali) { ?>
@@ -76,7 +76,7 @@
       </li>
       <?php } ?>
     </ul>
-    <input type="hidden" id="sort_num" name="sort_num" />
+    <input type="hidden" id="list_ids" name="list_ids" />
     <button id="submit">更新</button>
   </form>
 

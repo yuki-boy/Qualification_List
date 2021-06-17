@@ -40,5 +40,7 @@ Route::group(['middleware' => ['auth']], function()
 
     Route::post('/edit_qualification', [QualificationController::class, 'edit'])->name('edit.qualification');
 
+    Route::post('/update_qualification', [QualificationController::class, 'update'])->name('update.qualification');
+
 
 });
