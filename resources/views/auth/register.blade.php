@@ -7,22 +7,22 @@
     @csrf
     <div class="form-item">
       <label for="name"></label>
-      <input type="name" name="name" required="required" placeholder="Name"></input>
+      <input type="name" name="name" required="required" placeholder="お名前"></input>
     </div>
 
     <div class="form-item">
       <label for="email"></label>
-      <input type="email" name="email" required="required" placeholder="Email Address"></input>
+      <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
     </div>
 
     <div class="form-item">
       <label for="password"></label>
-      <input type="password" name="password" required="required" placeholder="Password"></input>
+      <input type="password" name="password" required="required" placeholder="パスワード"></input>
     </div>
 
     <div class="form-item">
       <label for="password-confirm"></label>
-      <input type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Password Confirmation"></input>
+      <input type="password" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード確認"></input>
     </div>
 
     <div class="button-panel">
@@ -30,8 +30,8 @@
     </div>
   </form>
   <div class="form-footer">
-    <p><a href="#">Create an account</a></p>
-    <p><a href="#">Forgot password?</a></p>
+    <p><a href="{{ route('login') }}">アカウントをお持ちの方はこちら</a></p>
+    <!-- <p><a href="#">Forgot password?</a></p> -->
   </div>
 </div>
 
