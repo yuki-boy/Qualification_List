@@ -65,7 +65,19 @@ class QualificationController extends Controller
 
     public function update(Request $request)
     {
+        $lists = explode(",", $request->list_ids);
+        $sorted_list = [];
+        foreach($lists as $index => $id) {
+            array_push($sorted_list, ['id' => $id, 'sort_num' => $index]);
+        }
         
+        foreach($sorted_list as $list) {
+            Qualification::find($list['id'])->update([
+                'sort_num' => $list['sort_num']
+            ]);
+        }
+        
+        return redirect('practice');
     }
 
 
