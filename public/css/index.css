@@ -17,18 +17,17 @@ body{
   text-align: center;
 }
 
-table{
+/* table{
   margin: 0 auto;
   width: 80%;
-}
+} */
 
-thead{
+/* thead{
   font-size: xx-large;
   border-bottom: solid 1px;
-}
+} */
 
-td{
-  /* background:lightblue; */
+/* td{
   text-align: center;
   padding:10px 0px;
 }
@@ -36,18 +35,18 @@ td{
 .each-tr{
   background-color: red;
 
-}
+} */
 
 
 
-tr:nth-child(even){
+/* tr:nth-child(even){
   background-color: gainsboro;
 
 }
 
 tbody{
   font-size: x-large;
-}
+} */
 
 .edit-quali{
   text-align: center;
@@ -55,6 +54,13 @@ tbody{
 
 .edit_fill{
   width: 300px;
+}
+
+.edit_buttons{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .delete_button{
@@ -118,10 +124,5 @@ tbody{
   justify-content: space-between;
 }
 
-.edit_buttons{
-  width: 300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+
 
