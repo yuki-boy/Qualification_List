@@ -28,7 +28,6 @@
     </div>
   </div>
 </form>
-<!-- <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div> -->
 </section>
 <!-- モーダルウィンドウ -->
 
@@ -76,8 +75,11 @@
       </li>
       <?php } ?>
     </ul>
+
+    @if($qualis->count() >= 2)
     <input type="hidden" id="list_ids" name="list_ids" />
-    <button id="submit">更新</button>
+    <button id="submit" class="btn btn-primary">並び替え</button>
+    @endif
   </form>
 
 </div>
