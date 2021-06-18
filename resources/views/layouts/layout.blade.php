@@ -33,7 +33,7 @@
         </a>
         
 
-        <form action="{{ route('logout') }}" method="post">
+        <form action="{{ route('logout') }}" method="post" onclick='return confirm("ログアウトしますか？");'>
         @csrf
         <button>ログアウト</button>
         </form> 

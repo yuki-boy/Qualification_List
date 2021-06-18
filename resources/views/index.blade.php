@@ -71,7 +71,7 @@
       ?>
 
       <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a>
-      <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a>
+      <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" onclick='return confirm("削除しますか？");'><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a>
 
       </li>
       <?php } ?>
