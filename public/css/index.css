@@ -9,7 +9,6 @@ body{
   margin-bottom: 30px;
 }
 
-
 .alert{
   z-index: 1;
   position: absolute;
@@ -17,10 +16,42 @@ body{
   text-align: center;
 }
 
-/* table{
+.column_wrapper{
+  /* background-color: aqua; */
+  font-size: x-large;
+  display: flex;
   margin: 0 auto;
-  width: 80%;
-} */
+  width: 90%;
+  /* text-align: center; */
+}
+
+.quali_wrapper{
+  /* background-color: yellowgreen; */
+  margin: 0 auto;
+  width: 90%;
+}
+
+.each_quali{
+  display: flex;
+  font-size: large;
+  /* text-align: center; */
+}
+
+.quali_wrapper_button{
+  justify-content: space-between;
+}
+
+ul.sortable{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+
+
+
 
 /* thead{
   font-size: xx-large;
