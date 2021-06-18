@@ -75,8 +75,11 @@
       </li>
       <?php } ?>
     </ul>
+
+    @if($qualis->count() >= 2)
     <input type="hidden" id="list_ids" name="list_ids" />
     <button id="submit" class="btn btn-primary">並び替え</button>
+    @endif
   </form>
 
 </div>

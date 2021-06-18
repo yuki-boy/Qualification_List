@@ -26,9 +26,12 @@
         </div>
     </div>
 
-        <div class="button-panel" style="padding-bottom: 24px;">
-        <input type="submit" class="button" title="Sign In" value="リセットリンクを送信">
-        </input>
+        <div class="button-panel">
+            <input type="submit" class="button" title="Sign In" value="リセットリンクを送信">
+            </input>
+            <div class="form-footer">
+            <p><a href="{{ route('login') }}">アカウントをお持ちの方はこちら</a></p>
+            </div>
         </div>
     </form>
 </div>
