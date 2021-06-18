@@ -32,13 +32,19 @@ body{
 }
 
 .each_quali{
+  /* background-color: yellow; */
   display: flex;
   font-size: large;
-  /* text-align: center; */
+  padding: 10px;
+  cursor: move;
 }
 
 .quali_wrapper_button{
-  justify-content: space-between;
+  /* background-color: wheat; */
+}
+
+.fas{
+  padding: 0 5px;
 }
 
 ul.sortable{

@@ -52,34 +52,34 @@
       <li id="<?php echo $quali['id']; ?>">
       <div class="each_quali">
       
-      <div style="width: 50%;">
-        <?php echo $quali->name ?>
-      </div>
+        <div style="width: 50%;">
+          <?php echo $quali->name ?>
+        </div>
 
-      <div style="width: 20%;">
-      <?php
-        if(is_null($quali->get_date)):
-          echo "未記入";
-        else:
-          echo $quali->get_date;
-        endif;
-      ?>
-      </div>
+        <div style="width: 20%;">
+        <?php
+          if(is_null($quali->get_date)):
+            echo "未記入";
+          else:
+            echo $quali->get_date;
+          endif;
+        ?>
+        </div>
 
-      <div style="width: 20%;">
-      <?php 
-        if(is_null($quali->lost_date)):
-          echo "未記入";
-        else:
-          echo $quali->lost_date;
-        endif;
-      ?>
-      </div>
+        <div style="width: 20%;">
+        <?php 
+          if(is_null($quali->lost_date)):
+            echo "未記入";
+          else:
+            echo $quali->lost_date;
+          endif;
+        ?>
+        </div>
 
-      <div class="quali_wrapper_button" style="width: 10%; display: flex;">
-      <a href="{{ route('edit.page', ['id' => $quali->id]) }}">編集</a>
-      <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" onclick='return confirm("削除しますか？");'>削除</a>
-      </div>
+        <div class="quali_wrapper_button" style="width: 10%; display: flex;">
+          <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><i class="fas fa-edit"></i></a>
+          <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" onclick='return confirm("削除しますか？");'><i class="fas fa-trash-alt"></i></a>
+        </div>
 
       </div>
       </li>
