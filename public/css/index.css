@@ -22,6 +22,7 @@ body{
   display: flex;
   margin: 0 auto;
   width: 90%;
+  border-bottom: solid 1px grey;
   /* text-align: center; */
 }
 
@@ -39,6 +40,8 @@ body{
   cursor: move;
 }
 
+
+
 .quali_wrapper_button{
   /* background-color: wheat; */
 }
@@ -53,6 +56,10 @@ ul.sortable{
 
 li{
   list-style: none;
+}
+
+li:nth-child(even){
+  background-color: #e9e9e9;
 }
 
 

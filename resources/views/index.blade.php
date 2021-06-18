@@ -66,7 +66,7 @@
         ?>
         </div>
 
-        <div style="width: 20%;">
+        <div style="width: 20%; opacity: 0.4;">
         <?php 
           if(is_null($quali->lost_date)):
             echo "未記入";
