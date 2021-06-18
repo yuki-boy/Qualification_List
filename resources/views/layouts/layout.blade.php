@@ -29,7 +29,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ route('index') }}">
-            {{ config('app.name', 'Laravel') }}
+            資格管理
         </a>
         
 
