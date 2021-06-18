@@ -28,7 +28,6 @@
     </div>
   </div>
 </form>
-<!-- <div id="close"><button type="button" class="btn btn-primary">閉じる</button></div> -->
 </section>
 <!-- モーダルウィンドウ -->
 
@@ -38,48 +37,61 @@
 </div>
 
 <div class="contents_wrapper">
+  <div class="column_wrapper">
+    <div style="width: 50%;">資格名</div>
+    <div style="width: 20%;">取得月</div>
+    <div style="width: 20%;">失効月</div>
+    <div style="width: 10%;" colspan="2">操作</div>
+  </div>
 
-<div class="contents_wrapper">
-  <td style="width: 30%;">資格名</td>
-  <td style="width: 20%;">取得月</td>
-  <td style="width: 20%;">失効月</td>
-  <td style="width: 10%;" colspan="2">操作</td>
-</div>
-
-
+  <div class="quali_wrapper">
   <form method="post" action="{{ route('update.qualification') }}">
     @csrf
     <ul class="sortable">
       <?php foreach($qualis as $quali) { ?>
       <li id="<?php echo $quali['id']; ?>">
-      <?php echo $quali->name?>
+      <div class="each_quali">
+      
+        <div style="width: 50%;">
+          <?php echo $quali->name ?>
+        </div>
 
-      <?php
-        if(is_null($quali->get_date)):
-          echo "未記入";
-        else:
-          echo $quali->get_date;
-        endif;
-      ?>
+        <div style="width: 20%;">
+        <?php
+          if(is_null($quali->get_date)):
+            echo "未記入";
+          else:
+            echo $quali->get_date;
+          endif;
+        ?>
+        </div>
 
-      <?php 
-        if(is_null($quali->lost_date)):
-          echo "未記入";
-        else:
-          echo $quali->lost_date;
-        endif;
-      ?>
+        <div style="width: 20%; opacity: 0.4;">
+        <?php 
+          if(is_null($quali->lost_date)):
+            echo "未記入";
+          else:
+            echo $quali->lost_date;
+          endif;
+        ?>
+        </div>
 
-      <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary">編集</button></a>
-      <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}"><button type="button" class="btn btn-primary" style="margin-left: 5px">削除</button></a>
+        <div class="quali_wrapper_button" style="width: 10%; display: flex;">
+          <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><i class="fas fa-edit"></i></a>
+          <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" onclick='return confirm("削除しますか？");'><i class="fas fa-trash-alt"></i></a>
+        </div>
 
+      </div>
       </li>
       <?php } ?>
     </ul>
-    <input type="hidden" id="list_ids" name="list_ids" />
-    <button id="submit">更新</button>
-  </form>
 
+    @if($qualis->count() >= 2)
+    <input type="hidden" id="list_ids" name="list_ids"/>
+    <button id="submit" class="btn btn-primary" style="float: right;">並び替え</button>
+    @endif
+  </form>
+  </div>
 </div>
 
 

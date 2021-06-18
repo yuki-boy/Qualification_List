@@ -21,6 +21,7 @@
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 <body>
   <div id="app">
@@ -29,13 +30,16 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ route('index') }}">
-            {{ config('app.name', 'Laravel') }}
+            資格管理
         </a>
         
 
-        <form action="{{ route('logout') }}" method="post">
+        <form action="{{ route('logout') }}" method="post" onclick='return confirm("ログアウトしますか？");'>
         @csrf
         <button>ログアウト</button>
+        <!-- <span style="cursor: pointer;">ログアウト</span> -->
+        <!-- <input type="button" value="ログアウト"> -->
+        
         </form> 
     </div>
 </nav>

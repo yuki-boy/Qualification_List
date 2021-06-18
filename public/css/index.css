@@ -9,7 +9,6 @@ body{
   margin-bottom: 30px;
 }
 
-
 .alert{
   z-index: 1;
   position: absolute;
@@ -17,18 +16,62 @@ body{
   text-align: center;
 }
 
-table{
+.column_wrapper{
+  /* background-color: aqua; */
+  font-size: x-large;
+  display: flex;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
+  border-bottom: solid 1px grey;
+  /* text-align: center; */
 }
 
-thead{
+.quali_wrapper{
+  /* background-color: yellowgreen; */
+  margin: 0 auto;
+  width: 90%;
+}
+
+.each_quali{
+  /* background-color: yellow; */
+  display: flex;
+  font-size: large;
+  padding: 10px;
+  cursor: move;
+}
+
+
+
+.quali_wrapper_button{
+  /* background-color: wheat; */
+}
+
+.fas{
+  padding: 0 5px;
+}
+
+ul.sortable{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+li:nth-child(even){
+  background-color: #e9e9e9;
+}
+
+
+
+
+
+/* thead{
   font-size: xx-large;
   border-bottom: solid 1px;
-}
+} */
 
-td{
-  /* background:lightblue; */
+/* td{
   text-align: center;
   padding:10px 0px;
 }
@@ -36,18 +79,18 @@ td{
 .each-tr{
   background-color: red;
 
-}
+} */
 
 
 
-tr:nth-child(even){
+/* tr:nth-child(even){
   background-color: gainsboro;
 
 }
 
 tbody{
   font-size: x-large;
-}
+} */
 
 .edit-quali{
   text-align: center;
@@ -55,6 +98,13 @@ tbody{
 
 .edit_fill{
   width: 300px;
+}
+
+.edit_buttons{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .delete_button{
@@ -118,10 +168,5 @@ tbody{
   justify-content: space-between;
 }
 
-.edit_buttons{
-  width: 300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+
 
