@@ -36,6 +36,10 @@
   <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
 </div>
 
+<div class="count_wrapper">
+  <h4>{{ $qualis->count() }}個の資格を所有</h4>
+</div>
+
 <div class="contents_wrapper">
   <div class="column_wrapper">
     <div style="width: 45%;">資格名</div>

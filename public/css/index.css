@@ -15,6 +15,10 @@ body{
   /* background-color: tomato; */
   display: flex;
   justify-content: center;
+}
+
+.count_wrapper{
+  text-align: center;
   margin-bottom: 30px;
 }
 
