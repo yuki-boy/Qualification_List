@@ -6,7 +6,6 @@
   const modal = document.getElementById('modal');
   const covor = document.getElementById('covor');
 
-
   open.addEventListener('click', () => {
     modal.classList.remove('hidden');
     covor.classList.remove('hidden');
@@ -22,8 +21,7 @@
   })
 }
 
-'use strict'
-
+{
   $(document).ready(function() {
   $("#timeout").fadeIn().queue(function() {
       setTimeout(function(){$("#timeout").dequeue();
@@ -31,9 +29,9 @@
   });
   $("#timeout").fadeOut();
   });
+}
 
-
-
+{
   $(function() {
     $(".sortable").sortable();
     $(".sortable").disableSelection();
@@ -43,3 +41,4 @@
         $("form").submit();
     });
   });
+}

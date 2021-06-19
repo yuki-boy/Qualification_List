@@ -20,16 +20,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/newlogin', [UserController::class, 'newlogin'])->name('newlogin');
-
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function()
-{
-    
-
-    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    
+{   
     Route::get('/index', [QualificationController::class, 'index'])->name('index');
 
     Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');
