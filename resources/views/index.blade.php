@@ -38,10 +38,10 @@
 
 <div class="contents_wrapper">
   <div class="column_wrapper">
-    <div style="width: 50%;">資格名</div>
+    <div style="width: 45%;">資格名</div>
     <div style="width: 20%;">取得月</div>
     <div style="width: 20%;">失効月</div>
-    <div style="width: 10%;" colspan="2">操作</div>
+    <div style="width: 15%;" colspan="2">操作</div>
   </div>
 
   <div class="quali_wrapper">
@@ -52,7 +52,7 @@
       <li id="<?php echo $quali['id']; ?>">
       <div class="each_quali">
       
-        <div style="width: 50%;">
+        <div style="width: 45%;">
           <?php echo $quali->name ?>
         </div>
 
@@ -76,7 +76,7 @@
         ?>
         </div>
 
-        <div class="quali_wrapper_button" style="width: 10%; display: flex;">
+        <div class="quali_wrapper_button" style="width: 15%; display: flex;">
           <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><i class="fas fa-edit"></i></a>
           <a href="{{ route('delete.qualification', ['id' => $quali->id]) }}" onclick='return confirm("削除しますか？");'><i class="fas fa-trash-alt"></i></a>
         </div>
