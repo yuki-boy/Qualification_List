@@ -2,6 +2,15 @@ body{
   z-index: 0;
 }
 
+.header_a{
+  text-decoration: none;
+  color: black;
+}
+
+.header_a:hover{
+  text-decoration: none;
+}
+
 .title_wrapper{
   /* background-color: tomato; */
   display: flex;
@@ -63,34 +72,6 @@ li:nth-child(even){
 }
 
 
-
-
-
-/* thead{
-  font-size: xx-large;
-  border-bottom: solid 1px;
-} */
-
-/* td{
-  text-align: center;
-  padding:10px 0px;
-}
-
-.each-tr{
-  background-color: red;
-
-} */
-
-
-
-/* tr:nth-child(even){
-  background-color: gainsboro;
-
-}
-
-tbody{
-  font-size: x-large;
-} */
 
 .edit-quali{
   text-align: center;
@@ -167,6 +148,3 @@ tbody{
   display: flex;
   justify-content: space-between;
 }
-
-
-

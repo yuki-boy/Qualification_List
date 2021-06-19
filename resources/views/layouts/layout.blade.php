@@ -34,13 +34,11 @@
         </a>
         
 
-        <form action="{{ route('logout') }}" method="post" onclick='return confirm("ログアウトしますか？");'>
+        <form action="{{ route('logout') }}" method="post" name="form_1" id="form_1" onclick='return confirm("ログアウトしますか？");'>
         @csrf
-        <button>ログアウト</button>
-        <!-- <span style="cursor: pointer;">ログアウト</span> -->
-        <!-- <input type="button" value="ログアウト"> -->
-        
-        </form> 
+        <!-- <button>ログアウト</button> -->
+        <a class="header_a" href="javascript:form_1.submit()">ログアウト</a>
+        </form>
     </div>
 </nav>
 
