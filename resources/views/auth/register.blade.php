@@ -1,4 +1,5 @@
 @extends('layouts.auth')
+@section('title', '資格管理 register')
 @section('content')
 
 <div class="form-wrapper">

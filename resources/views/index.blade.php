@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@section('title', '資格管理')
 @section('content')
 
 <!-- 追加・削除・編集時のアラート表示 -->

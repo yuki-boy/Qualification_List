@@ -1,6 +1,7 @@
 @extends('layouts.auth')
-
+@section('title', '資格管理 password reset')
 @section('content')
+
 <div class="form-wrapper">
     <h1>パスワードを<br>リセット</h1>
     <form method="POST" action="{{ route('password.email') }}">

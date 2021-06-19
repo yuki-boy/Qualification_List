@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@section('title', '資格編集')
 @section('content')
 
 <div class="fills">
