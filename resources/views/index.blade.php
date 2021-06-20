@@ -32,7 +32,7 @@
 <!-- モーダルウィンドウ -->
 
 <div class="title_wrapper">
-  <h1>{{ Auth::user()->name }}の資格リスト</h1>
+  <h1> $user の資格リスト</h1>
   <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
 </div>
 
