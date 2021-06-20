@@ -16,10 +16,8 @@ class QualificationController extends Controller
             ->orderBy('qualifications.sort_num')
             ->get();
         // dd($qualis);
-
-        $user = Auth::name();
-
-        return view('index', compact('qualis', 'user'));
+        
+        return view('index', compact('qualis'));
     }
 
     public function save(Request $request)
