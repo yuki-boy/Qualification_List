@@ -53,6 +53,7 @@ body{
   cursor: move;
 }
 
+
 .fas{
   padding: 0 5px;
 }
@@ -63,10 +64,6 @@ ul.sortable{
 
 li{
   list-style: none;
-}
-
-li:nth-child(even){
-  background-color: #e9e9e9;
 }
 
 
