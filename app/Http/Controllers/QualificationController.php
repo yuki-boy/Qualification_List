@@ -12,11 +12,18 @@ class QualificationController extends Controller
     public function index()
     {
         $qualis = Qualification::select('id', 'name', 'get_date', 'lost_date', 'sort_num')
+<<<<<<< HEAD
             ->where('user_id','=',auth::id())
+=======
+            ->where('user_id','=','users.id')
+>>>>>>> new-dev
             ->orderBy('qualifications.sort_num')
             ->get();
         // dd($qualis);
-        return view('index', compact('qualis'));
+
+        $user = Auth::name();
+
+        return view('index', compact('qualis', 'user'));
     }
 
     public function save(Request $request)
@@ -32,6 +39,7 @@ class QualificationController extends Controller
         $quali->name = $request->name;
         $quali->get_date = $request->get_date;
         $quali->lost_date = $request->lost_date;
+        $quali->sort_num = $request->sort_num;
         $quali->user_id = Auth::user()->id;
         $quali->save();
         

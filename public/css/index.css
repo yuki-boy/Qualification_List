@@ -29,6 +29,7 @@ body{
   text-align: center;
 }
 
+<<<<<<< HEAD
 .column_wrapper{
   /* background-color: aqua; */
   font-size: x-large;
@@ -51,9 +52,28 @@ body{
   font-size: large;
   padding: 10px;
   cursor: move;
+=======
+/* table{
+  margin: 0 auto;
+  width: 80%;
+} */
+
+/* thead{
+  font-size: xx-large;
+  border-bottom: solid 1px;
+} */
+
+/* td{
+  text-align: center;
+  padding:10px 0px;
+>>>>>>> new-dev
 }
 
 
+<<<<<<< HEAD
+=======
+} */
+>>>>>>> new-dev
 
 /* .quali_wrapper_button{
   background-color: wheat;
@@ -63,17 +83,28 @@ body{
   padding: 0 5px;
 }
 
+<<<<<<< HEAD
 ul.sortable{
   padding: 0;
 }
+=======
+/* tr:nth-child(even){
+  background-color: gainsboro;
+>>>>>>> new-dev
 
 li{
   list-style: none;
 }
 
+<<<<<<< HEAD
 li:nth-child(even){
   background-color: #e9e9e9;
 }
+=======
+tbody{
+  font-size: x-large;
+} */
+>>>>>>> new-dev
 
 
 
@@ -152,3 +183,9 @@ li:nth-child(even){
   display: flex;
   justify-content: space-between;
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> new-dev

@@ -33,7 +33,11 @@
 <!-- モーダルウィンドウ -->
 
 <div class="title_wrapper">
+<<<<<<< HEAD
   <h1>{{ auth::user()->name }}の資格リスト</h1>
+=======
+  <h1> $user の資格リスト</h1>
+>>>>>>> new-dev
   <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
 </div>
 
@@ -90,6 +94,15 @@
       </li>
       <?php } ?>
     </ul>
+<<<<<<< HEAD
+=======
+
+    @if($qualis->count() >= 2)
+    <input type="hidden" id="list_ids" name="list_ids" />
+    <button id="submit" class="btn btn-primary">並び替え</button>
+    @endif
+  </form>
+>>>>>>> new-dev
 
     @if($qualis->count() >= 2)
     <input type="hidden" id="list_ids" name="list_ids"/>

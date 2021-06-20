@@ -37,8 +37,13 @@
         <form action="{{ route('logout') }}" method="post" name="form_1" id="form_1" onclick='return confirm("ログアウトしますか？");'>
         @csrf
         <!-- <button>ログアウト</button> -->
+<<<<<<< HEAD
         <a class="header_a" href="javascript:form_1.submit()">ログアウト</a>
         </form>
+=======
+        <span style="cursor: pointer;">ログアウト</span>
+        </form> 
+>>>>>>> new-dev
     </div>
 </nav>
 
