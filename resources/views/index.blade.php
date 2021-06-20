@@ -33,11 +33,13 @@
 <!-- モーダルウィンドウ -->
 
 <div class="title_wrapper">
-  <h1>{{ Auth::user()?->name }}の資格リスト</h1>
+  <h1>{{ auth::user()->name }}の資格リスト</h1>
   <div id="open"><button type="button" class="btn btn-primary">追加</button></div>
 </div>
 
-<!-- ここに資格数を表示する機能を追加したい -->
+<div class="count_wrapper">
+<h4>{{ $qualis->count() }}個の資格を所有</h4>
+</div>
 
 <div class="contents_wrapper">
   <div class="column_wrapper">

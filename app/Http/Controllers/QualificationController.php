@@ -12,7 +12,7 @@ class QualificationController extends Controller
     public function index()
     {
         $qualis = Qualification::select('id', 'name', 'get_date', 'lost_date', 'sort_num')
-            ->where('user_id','=',Auth::id())
+            ->where('user_id','=',auth::id())
             ->orderBy('qualifications.sort_num')
             ->get();
         // dd($qualis);
