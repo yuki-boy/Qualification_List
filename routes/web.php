@@ -17,7 +17,7 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/', [QualificationController::class, 'index'])->name('index');
+// Route::get('/', [QualificationController::class, 'index'])->name('index');
 
 Auth::routes();
 
@@ -25,7 +25,7 @@ Route::group(['middleware' => ['auth']], function()
 {   
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
-    Route::get('/index', [QualificationController::class, 'index'])->name('index');
+    Route::get('/', [QualificationController::class, 'index'])->name('index');
 
     Route::post('/save_qualification', [QualificationController::class, 'save'])->name('save.qualification');
 
