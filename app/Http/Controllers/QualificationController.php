@@ -17,7 +17,7 @@ class QualificationController extends Controller
             ->get();
         // dd($qualis);
 
-        return view('index', compact('qualis'));
+        return view('/', compact('qualis'));
     }
 
     public function save(Request $request)
@@ -61,7 +61,7 @@ class QualificationController extends Controller
             'lost_date' => $request->lost_date,
         ]);
 
-        return redirect('index')->with('success', '編集しました');
+        return redirect('/')->with('success', '編集しました');
     }
 
     public function update(Request $request)
@@ -78,7 +78,7 @@ class QualificationController extends Controller
             ]);
         }
         
-        return redirect('index');
+        return redirect('/');
     }
 
 
