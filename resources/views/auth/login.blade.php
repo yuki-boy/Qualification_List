@@ -4,7 +4,7 @@
 
 <div class="form-wrapper">
   <h1>ログイン</h1>
-  <form method="POST" action="{{ route('login') }}">
+  <form method="POST" action="{{ route('login') }}" autocomplete="off">
     @csrf
     <div class="form-item">
       <label for="email"></label>

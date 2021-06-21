@@ -15,7 +15,7 @@
 
 <!-- モーダルウィンドウ -->
 <section id="modal" class="hidden">
-<form method="post" action="{{ route('save.qualification') }}">
+<form method="post" action="{{ route('save.qualification') }}" autocomplete="off">
   @csrf
   <div class="fills">
     <div class="quali_fill"><input type="text" name="name" placeholder="資格名を入力して下さい" style="width: 80%;"></div>
