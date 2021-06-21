@@ -17,7 +17,7 @@ class QualificationController extends Controller
             ->get();
         // dd($qualis);
 
-        return view('/', compact('qualis'));
+        return view('index', compact('qualis'));
     }
 
     public function save(Request $request)
