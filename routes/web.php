@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\QualificationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/', [LoginController::class, 'login'])->name('login');
+
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function()
 {   
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
-
-    Route::get('/', function () {
-        return view('index');
-    });
 
     Route::get('/index', [QualificationController::class, 'index'])->name('index');
 
