@@ -16,15 +16,15 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function()
 {   
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+
+    Route::get('/', function () {
+        return view('index');
+    });
 
     Route::get('/index', [QualificationController::class, 'index'])->name('index');
 
