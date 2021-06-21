@@ -40,10 +40,10 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function login()
-    {
-        return redirect()->route('index');
-    }
+    // public function login()
+    // {
+    //     return redirect()->route('index');
+    // }
 
     // logoutしたらloginページに遷移するよう実装
     protected function loggedOut(Request $request)
