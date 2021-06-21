@@ -42,7 +42,7 @@ class LoginController extends Controller
 
     public function login()
     {
-        return redirect()->route('login');
+        return redirect()->route('index');
     }
 
     // logoutしたらloginページに遷移するよう実装
