@@ -17,7 +17,7 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-// Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/', [QualificationController::class, 'index'])->name('index');
 
 Auth::routes();
 
