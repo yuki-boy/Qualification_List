@@ -18,7 +18,8 @@ class CreateQualificationsTable extends Migration
             $table->string('name');
             $table->string('get_date')->nullable();
             $table->string('lost_date')->nullable();
-            $table->integer('sort_num')->nullable(false);
+            // $table->integer('sort_num')->nullable(false);
+            $table->integer('sort_num')->default(1);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
             $table->timestamp('deleted_at')->nullable();
