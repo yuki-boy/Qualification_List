@@ -80,6 +80,7 @@
           endif;
         ?>
         </div>
+    </ul>
 
         <div class="quali_wrapper_button" style="width: 15%; display: flex;">
           <a href="{{ route('edit.page', ['id' => $quali->id]) }}"><i class="fas fa-edit"></i></a>
@@ -89,7 +90,7 @@
       </div>
       </li>
       <?php } ?>
-    </ul>
+    <!-- </ul> -->
 
     @if($qualis->count() >= 2)
     <input type="hidden" id="list_ids" name="list_ids"/>
