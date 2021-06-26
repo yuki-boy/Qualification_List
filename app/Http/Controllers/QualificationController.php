@@ -11,10 +11,9 @@ class QualificationController extends Controller
 {
     public function index()
     {
-        $qualis = Qualification::select('id', 'name', 'get_date', 'lost_date', 'sort_num')
+        $qualis = Qualification::increment('id', 'name', 'get_date', 'lost_date', 'sort_num')
             ->where('user_id','=',Auth::id())
-            // ->orderBy('qualifications.sort_num')
-            ->increment('qualifications.sort_num')
+            ->orderBy('qualifications.sort_num')
             ->get();
 
         return view('index', compact('qualis'));
