@@ -16,7 +16,8 @@ class QualificationController extends Controller
             ->orderBy('qualifications.sort_num');
             // ->get();
 
-        $qualis->increment('qualifications.sort_num');
+        $qualis->increment('qualifications.sort_num')
+            ->get();
 
         return view('index', compact('qualis'));
     }
