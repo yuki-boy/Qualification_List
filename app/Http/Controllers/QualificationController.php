@@ -15,7 +15,7 @@ class QualificationController extends Controller
             ->where('user_id','=',Auth::id())
             // ->orderBy('qualifications.sort_num')
             ->increment('qualifications.sort_num')
-            ->get();
+            // ->get();
 
         return view('index', compact('qualis'));
     }
